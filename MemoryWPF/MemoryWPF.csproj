@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="Modele\Carte\CarteImage.cs" />
     <Compile Include="Modele\Carte\Paquet\PaquetImage.cs" />
+    <Compile Include="Modele\ExempleDAO\Connexion.cs" />
     <Compile Include="Modele\Jeu\MemoryImage.cs" />
     <Compile Include="VueModele\MemoryVueModel.cs" />
     <Compile Include="VueModele\VueModele.cs" />
