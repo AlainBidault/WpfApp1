@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F958C15B-2954-4285-AF2D-9F992AF7C328}</ProjectGuid>
+    <ProjectGuid>{CBCD0C0A-195B-4872-B76E-4CB47BFBECE8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WpfApp1</RootNamespace>
-    <AssemblyName>WpfApp1</AssemblyName>
+    <RootNamespace>MemoryWPF</RootNamespace>
+    <AssemblyName>MemoryWPF</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,28 +55,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Source\Modele\Carte\Carte.cs" />
-    <Compile Include="Source\Modele\Carte\Carte32.cs" />
-    <Compile Include="Source\Modele\Carte\CarteDessin.cs" />
-    <Compile Include="Source\Modele\Carte\CartePourMemory.cs" />
-    <Compile Include="Source\Modele\Carte\Exception\SaisieException.cs" />
-    <Compile Include="Source\Modele\Carte\ICarte.cs" />
-    <Compile Include="Source\Modele\Carte\Paquet\IPaquet.cs" />
-    <Compile Include="Source\Modele\Carte\Paquet\Paquet.cs" />
-    <Compile Include="Source\Modele\Carte\Paquet\Paquet32.cs" />
-    <Compile Include="Source\Modele\Carte\Paquet\PaquetDessin.cs" />
-    <Compile Include="Source\Modele\Jeu\JeuDeCartes.cs" />
-    <Compile Include="Source\Modele\Jeu\Memory.cs" />
-    <Compile Include="Source\Modele\Jeu\Memory32.cs" />
-    <Compile Include="Source\Modele\Jeu\MemoryDessin.cs" />
-    <Compile Include="Source\Modele\Jeu\PlusOuMoins.cs" />
-    <Compile Include="Source\Modele\Joueur\IJoueur.cs" />
-    <Compile Include="Source\Modele\Joueur\Joueur.cs" />
-    <Compile Include="Source\Modele\Joueur\JoueurMemory.cs" />
-    <Compile Include="Source\Modele\Joueur\JoueurPlusOuMoins.cs" />
-    <Compile Include="Source\Modele\Personne.cs" />
-    <Compile Include="Source\Modele\Personne1.cs" />
-    <Page Include="PremierMessage.xaml">
+    <Compile Include="Modele\Carte\CarteImage.cs" />
+    <Compile Include="Modele\Carte\Paquet\PaquetImage.cs" />
+    <Compile Include="Modele\Jeu\MemoryImage.cs" />
+    <Compile Include="VueModele\MemoryVueModel.cs" />
+    <Compile Include="VueModele\VueModele.cs" />
+    <Page Include="Vue\MemoryDessin - Copier.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vue\MemoryImages.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Vue\Memory32.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -84,8 +76,33 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="PremierMessage.xaml.cs">
-      <DependentUpon>PremierMessage.xaml</DependentUpon>
+    <Compile Include="Modele\Carte\Carte.cs" />
+    <Compile Include="Modele\Carte\Carte32.cs" />
+    <Compile Include="Modele\Carte\CarteDessin.cs" />
+    <Compile Include="Modele\Carte\CartePourMemory.cs" />
+    <Compile Include="Modele\Carte\Exception\SaisieException.cs" />
+    <Compile Include="Modele\Carte\ICarte.cs" />
+    <Compile Include="Modele\Carte\Paquet\IPaquet.cs" />
+    <Compile Include="Modele\Carte\Paquet\Paquet.cs" />
+    <Compile Include="Modele\Carte\Paquet\Paquet32.cs" />
+    <Compile Include="Modele\Carte\Paquet\PaquetDessin.cs" />
+    <Compile Include="Modele\Jeu\JeuDeCartes.cs" />
+    <Compile Include="Modele\Jeu\Memory.cs" />
+    <Compile Include="Modele\Jeu\Memory32.cs" />
+    <Compile Include="Modele\Jeu\MemoryDessin.cs" />
+    <Compile Include="Modele\Jeu\PlusOuMoins.cs" />
+    <Compile Include="Modele\Joueur\IJoueur.cs" />
+    <Compile Include="Modele\Joueur\Joueur.cs" />
+    <Compile Include="Modele\Joueur\JoueurMemory.cs" />
+    <Compile Include="Modele\Joueur\JoueurPlusOuMoins.cs" />
+    <Compile Include="Vue\MemoryDessin - Copier.xaml.cs">
+      <DependentUpon>MemoryDessin - Copier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vue\MemoryImages.xaml.cs">
+      <DependentUpon>MemoryImages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vue\Memory32.xaml.cs">
+      <DependentUpon>Memory32.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -116,5 +133,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Vue\photos\dos.jpg" />
+    <Resource Include="Vue\photos\dragon.jpeg" />
+    <Resource Include="Vue\photos\faille.jpeg" />
+    <Resource Include="Vue\photos\porte.jpeg" />
+    <Resource Include="Vue\photos\tresor.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

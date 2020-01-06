@@ -11,9 +11,11 @@
             <TabItem Header="onglet1" Height="22" VerticalAlignment="Top">
                 <TabItem.Content>
                     <Grid Background="#FFE5E5E5">
+                        <TextBlock HorizontalAlignment="Left" Margin="211,14,0,0" TextWrapping="Wrap" Text="{Binding Path=Simple}" VerticalAlignment="Top"/>
                         <TextBlock HorizontalAlignment="Left" Margin="211,74,0,0" TextWrapping="Wrap" Text="{Binding Path=Prenom0, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
                         <TextBlock HorizontalAlignment="Left" Margin="280,74,0,0" TextWrapping="Wrap" Text="{Binding Path=Nom0, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
                         <TextBlock HorizontalAlignment="Left" Margin="211,114,0,0" TextWrapping="Wrap" Text="coucou" VerticalAlignment="Top"/>
+                        <TextBlock HorizontalAlignment="Left" Margin="260,134,0,0" TextWrapping="Wrap" Text="{Binding Path=Qqn1, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
                         <TextBlock HorizontalAlignment="Left" Margin="260,114,0,0" TextWrapping="Wrap" Text="{Binding Path=Qqn.Prenom, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
                         <TextBlock HorizontalAlignment="Left" Margin="340,114,0,0" TextWrapping="Wrap" Text="{Binding Path=Qqn.Nom, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
                         <Image HorizontalAlignment="Left" Height="100" Margin="436,90,0,0" VerticalAlignment="Top" Width="100"/>

@@ -24,14 +24,27 @@ namespace WpfApp1
     public partial class MainWindow : Window, INotifyPropertyChanged // détecte le changement de propriété
     {
 
+        private string simple = "SIM-P-LE";
         private string prenom0 = "Jacques";
         private string nom0 = "POMME";
 
         private Personne qqn; // attribut utilisé dans un binding
         public Personne Qqn {
             get { return qqn; }
-            set { qqn = value; OnPropertyChanged("Qqn.Usage"); }// On appelle la méthode si le qqn change
+            set { qqn = value; OnPropertyChanged("Qqn"); }// On appelle la méthode si le qqn change
         }
+        private Personne1 qqn1; // attribut utilisé dans un binding
+        public Personne1 Qqn1
+        {
+            get { return qqn1; }
+            set { qqn1 = value; OnPropertyChanged("Qqn1"); }// On appelle la méthode si le qqn change
+        }
+        public string Simple
+        {
+            get { return simple; }
+            set { simple = value;  }
+        }
+
         public string Nom0
         {
             get { return nom0; }
@@ -49,7 +62,15 @@ namespace WpfApp1
         {
             if (PropertyChanged!=null)
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(nomPropriete));
+                if (nomPropriete.Equals("Qqn"))
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("Qqn.Nom"));
+                    PropertyChanged(this, new PropertyChangedEventArgs("Qqn.Prenom"));
+                }
+                else
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs(nomPropriete));
+                }
             }
         }
 

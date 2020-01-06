@@ -1,0 +1,31 @@
+﻿<Window x:Class="MemoryWPF.Vue.Images.MemoryBehind"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MemoryWPF"
+        mc:Ignorable="d"
+        Title="Memory" Height="500" Width="700">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="500,14,0,0" TextWrapping="Wrap" Text="Memory Images" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="20,14,0,0" TextWrapping="Wrap" Text="{Binding Path=Indications, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
+        <ListBox HorizontalAlignment="Left" Height="300" Margin="50,50,0,0"
+                 VerticalAlignment="Top" Width="600" Name="tablecartes"
+                 SelectionChanged="TurnCard" ItemsSource="{Binding Path=Jeu}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    
+                        <Image Height="40" Width="30" Margin="5,5,0,0" Source="{Binding Path=Url}"/>
+                      
+                   
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Image Width="100" Margin="0,350,0,0" Source="./photos/dos.jpg"/>
+        <Image Width="100" Margin="350,350,0,0" Source="./photos/dragon.jpeg"/>
+
+        <!--ListBox HorizontalAlignment="Left" Height="200" Margin="50,250,0,0"
+                 VerticalAlignment="Top" Width="600" Name="lstData2"
+                 ItemsSource="{Binding Path=JeuString}"/-->
+    </Grid>
+</Window>

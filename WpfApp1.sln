@@ -5,16 +5,40 @@ VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.csproj", "{F958C15B-2954-4285-AF2D-9F992AF7C328}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeuxCartes", "..\CoursABI\ConsoleApp1\JeuxDeCartes\JeuxCartes.csproj", "{2F5A6F84-E718-440E-926D-827DF91856F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryWPF", "MemoryWPF\MemoryWPF.csproj", "{CBCD0C0A-195B-4872-B76E-4CB47BFBECE8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F958C15B-2954-4285-AF2D-9F992AF7C328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F958C15B-2954-4285-AF2D-9F992AF7C328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F958C15B-2954-4285-AF2D-9F992AF7C328}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F958C15B-2954-4285-AF2D-9F992AF7C328}.Debug|x86.Build.0 = Debug|Any CPU
 		{F958C15B-2954-4285-AF2D-9F992AF7C328}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F958C15B-2954-4285-AF2D-9F992AF7C328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F958C15B-2954-4285-AF2D-9F992AF7C328}.Release|x86.ActiveCfg = Release|Any CPU
+		{F958C15B-2954-4285-AF2D-9F992AF7C328}.Release|x86.Build.0 = Release|Any CPU
+		{2F5A6F84-E718-440E-926D-827DF91856F9}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2F5A6F84-E718-440E-926D-827DF91856F9}.Debug|x86.ActiveCfg = Debug|x86
+		{2F5A6F84-E718-440E-926D-827DF91856F9}.Debug|x86.Build.0 = Debug|x86
+		{2F5A6F84-E718-440E-926D-827DF91856F9}.Release|Any CPU.ActiveCfg = Release|x86
+		{2F5A6F84-E718-440E-926D-827DF91856F9}.Release|x86.ActiveCfg = Release|x86
+		{2F5A6F84-E718-440E-926D-827DF91856F9}.Release|x86.Build.0 = Release|x86
+		{CBCD0C0A-195B-4872-B76E-4CB47BFBECE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBCD0C0A-195B-4872-B76E-4CB47BFBECE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBCD0C0A-195B-4872-B76E-4CB47BFBECE8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CBCD0C0A-195B-4872-B76E-4CB47BFBECE8}.Debug|x86.Build.0 = Debug|Any CPU
+		{CBCD0C0A-195B-4872-B76E-4CB47BFBECE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBCD0C0A-195B-4872-B76E-4CB47BFBECE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBCD0C0A-195B-4872-B76E-4CB47BFBECE8}.Release|x86.ActiveCfg = Release|Any CPU
+		{CBCD0C0A-195B-4872-B76E-4CB47BFBECE8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
