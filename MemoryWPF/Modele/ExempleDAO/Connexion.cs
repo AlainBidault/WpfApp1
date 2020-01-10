@@ -66,20 +66,20 @@ namespace CoursABI.dao
          */
 
 
-        public static void Create() // un objet C# de type pilote devrait être passé
+        public static void Create() // (Pilote pilote) un objet C# de type pilote doit  être passé
         {
             SqlCommand command = Connexion.GetInstance().CreateCommand();
             // Définition de la requête
             command.CommandText = "INSERT INTO PILOTE (nompil,adr,sal) VALUES (@nom, @adr,@sal)";
-            command.Parameters.AddWithValue("@nom", "Faraday");
-            command.Parameters.AddWithValue("@adr", "Dijon");
-            command.Parameters.AddWithValue("@sal", 15999);
+            command.Parameters.AddWithValue("@nom", "Faraday"); //("@nom", pilote.Nom)
+            command.Parameters.AddWithValue("@adr", "Dijon");//("@adr", pilote.Adresse)
+            command.Parameters.AddWithValue("@sal", 15999);//("@sal", pilote.Salaire)
 
             // Exécution de la requête de modification de la base
             command.ExecuteNonQuery();
         }
 
-        public static void Read(int id)
+        public static void Read(int id) // un objet C# de type pilote peut aussi être passé
         {
             SqlCommand command = Connexion.GetInstance().CreateCommand();
             command.CommandText = "SELECT * FROM PILOTE WHERE numpil=@id";
@@ -94,7 +94,7 @@ namespace CoursABI.dao
             dataReader.Close();
         }
 
-        public static void Update() // un objet pilote C# de type pilote devrait être passé
+        public static void Update() // (Pilote pilote) un objet pilote C# de type pilote doit être passé
         {
             SqlCommand command = Connexion.GetInstance().CreateCommand();
             // Définition de la requête
@@ -107,7 +107,7 @@ namespace CoursABI.dao
             command.ExecuteNonQuery();
         }
 
-        public static void Delete(int id) // un objet C# de type pilote devrait être passé
+        public static void Delete(int id) // un objet C# de type pilote peut aussi être passé
         {
             SqlCommand command = Connexion.GetInstance().CreateCommand();
             // Définition de la requête
