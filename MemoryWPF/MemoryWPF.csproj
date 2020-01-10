@@ -61,7 +61,7 @@
     <Compile Include="Modele\Jeu\MemoryImage.cs" />
     <Compile Include="VueModele\MemoryVueModel.cs" />
     <Compile Include="VueModele\VueModele.cs" />
-    <Page Include="Vue\MemoryDessin - Copier.xaml">
+    <Page Include="Vue\MemoryDessin.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -96,8 +96,8 @@
     <Compile Include="Modele\Joueur\Joueur.cs" />
     <Compile Include="Modele\Joueur\JoueurMemory.cs" />
     <Compile Include="Modele\Joueur\JoueurPlusOuMoins.cs" />
-    <Compile Include="Vue\MemoryDessin - Copier.xaml.cs">
-      <DependentUpon>MemoryDessin - Copier.xaml</DependentUpon>
+    <Compile Include="Vue\MemoryDessin.xaml.cs">
+      <DependentUpon>MemoryDessin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Vue\MemoryImages.xaml.cs">
       <DependentUpon>MemoryImages.xaml</DependentUpon>

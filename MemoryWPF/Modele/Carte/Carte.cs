@@ -32,7 +32,7 @@
         public override string ToString()
         {
             string rep = dos;
-            if (! this.visible) // mettre un not pour simplifier les tests.
+            if (this.visible) // mettre un not pour simplifier les tests.
             {
                 rep = GetFace();
             }
