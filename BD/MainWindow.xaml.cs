@@ -1,5 +1,6 @@
 ﻿using BD.dao;
 using BD.Modele;
+using BD.Modele.ExempleDAO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,7 +28,7 @@ namespace BD
             InitializeComponent();
             Connexion.ConnecterUtilisateur("AlainB","toto");
             Connexion.GetInstance();
-            //Des petits essais sur la DAO, affichés en "sortie"
+            //Des petits essais sur la DAO classique, affichés en "sortie"
             Pilote pilote = PiloteDAO.Read(1);
             Console.WriteLine(pilote);
             pilote.NomPil = "Edgar";
@@ -38,6 +39,15 @@ namespace BD
             //Console.WriteLine(pilote);
             //PiloteDAO.Delete(pilote.NumPil); // pour tester DELETE
             Connexion.close();
+            // Des essais avec linq et Entity Framework
+            var ctx = new ModelPilote();
+            PILOTE pilote2 = ctx.PILOTE.Find(1);
+            Console.WriteLine(pilote2);
+            pilote2.nompil = "Bernard";
+            ctx.PILOTE.Add(pilote2);
+            ctx.SaveChanges();
+            Console.WriteLine(pilote2);
+
         }
     }
 }
