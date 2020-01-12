@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeuxCartes", "..\CoursABI\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryWPF", "MemoryWPF\MemoryWPF.csproj", "{CBCD0C0A-195B-4872-B76E-4CB47BFBECE8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BD", "BD\BD.csproj", "{73896E2F-F91A-40A5-AF9E-EA9CAD71C11C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,14 @@ Global
 		{CBCD0C0A-195B-4872-B76E-4CB47BFBECE8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CBCD0C0A-195B-4872-B76E-4CB47BFBECE8}.Release|x86.ActiveCfg = Release|Any CPU
 		{CBCD0C0A-195B-4872-B76E-4CB47BFBECE8}.Release|x86.Build.0 = Release|Any CPU
+		{73896E2F-F91A-40A5-AF9E-EA9CAD71C11C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73896E2F-F91A-40A5-AF9E-EA9CAD71C11C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73896E2F-F91A-40A5-AF9E-EA9CAD71C11C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{73896E2F-F91A-40A5-AF9E-EA9CAD71C11C}.Debug|x86.Build.0 = Debug|Any CPU
+		{73896E2F-F91A-40A5-AF9E-EA9CAD71C11C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73896E2F-F91A-40A5-AF9E-EA9CAD71C11C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73896E2F-F91A-40A5-AF9E-EA9CAD71C11C}.Release|x86.ActiveCfg = Release|Any CPU
+		{73896E2F-F91A-40A5-AF9E-EA9CAD71C11C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
