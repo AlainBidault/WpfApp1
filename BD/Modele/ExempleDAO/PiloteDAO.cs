@@ -26,15 +26,20 @@ namespace BD.dao
         {
             SqlCommand command = Connexion.GetInstance().CreateCommand();
             // Définition de la requête
-            command.CommandText = "INSERT INTO PILOTE (nompil,adr,sal) VALUES (@nom, @adr,@sal)";
+            command.CommandText = "INSERT INTO PILOTE (nompil,adr,sal) VALUES (@nom, @adr,@sal)"
+                + "SELECT CAST(scope_identity() AS int)";
             command.Parameters.AddWithValue("@nom", pilote.NomPil);
             command.Parameters.AddWithValue("@adr", pilote.Adresse);
             command.Parameters.AddWithValue("@sal", pilote.Salaire);
 
-            // Exécution de la requête de modification de la base
-            command.ExecuteNonQuery();
-
-            //TODO récupérer l'id généré
+            try
+            {
+                pilote.NumPil = (Int32)command.ExecuteScalar(); // on récupère l'id généré.
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         public static Pilote Read(int id) // un objet C# de type pilote peut aussi être passé

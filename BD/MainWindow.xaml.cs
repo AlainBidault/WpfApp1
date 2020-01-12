@@ -34,6 +34,9 @@ namespace BD
             PiloteDAO.Update(pilote);
             pilote = PiloteDAO.Read0(1);
             Console.WriteLine(pilote);
+            //PiloteDAO.Create(pilote); // pour tester INSERT
+            //Console.WriteLine(pilote);
+            //PiloteDAO.Delete(pilote.NumPil); // pour tester DELETE
             Connexion.close();
         }
     }
